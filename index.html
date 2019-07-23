@@ -1,0 +1,76 @@
+<!DOCTYPE Html>
+<Html>
+<head>
+<title>jquery crash course Events</title>
+<script src="https://code.jquery.com/jquer-3.3.1.slim.min.js"></script>
+<style>
+body{
+      font-size: 17px;
+      font-family:arial;
+      background: #f4f4f4;
+      line-height:1.5em;
+     }
+     header{
+              background: #333;
+              color: #fff;
+              padding: 20px;
+              text-align: center;
+              border-bottom: 4px #000 solid;
+              margin-bottom:10px;
+             }
+             #container{
+                    width: 90%;
+                    margin:auto;
+                    padding:10px;
+             }
+             </style>
+             </head>
+             <body>
+              <header>
+                  <h1>Jquery crash course</h1>
+               </header>
+               <div id="container">
+                  <h3>Mouse Events</h3>
+                  <button id="btn1">Button 1</button>
+                  <button id="btn2">Button 2</Button>
+                  <h1 id="coords"></h1>
+                </div>
+                <form>
+                    <lable>Name</lable><br>
+                    <input type="text" id="Name" name="name">
+                    <br>
+                    <lable>Email</lable><br>
+                    <input type="email" id="Email" name="email">
+                    <br>
+                    <lable>Gender</lable><br>
+                    <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    </Select>
+                    <br>
+                    <input id="submit" value="Submit">
+                 </form>
+                 <Script>
+                 $(document).ready(function(){
+                    $('#btn1').click(function(){
+                    alert('Button Clicked!');
+                  });
+                  });
+                  $(document).on('mouse move', function(e){
+                    $('#coords').html('coords: Y : '+e.ClientY +'coords:X '+e.clientX);
+                    });
+                    $('input').focus(function(){
+                    //alert('Focus');
+                    $(this).css('background','pink');
+                    });
+                    
+                    </Script>
+                    </body>
+                    </Html>
+                  
+                  
+               
+                  
+                  
+               
+
